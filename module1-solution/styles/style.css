@@ -1,13 +1,17 @@
-.green p {
+p.green {
   color: green;
   border-color: green;
-  border: 1px solid;
-  width: 250px;
 }
 
-.red p {
+p.red {
   color: red;
   border-color: red;
-  border: 1px solid;
-  width: 250px;
+}
+
+input.green {
+  box-shadow: 0px 0px 2px 1px green;
+}
+
+input.red {
+  box-shadow: 0px 0px 2px 1px red;
 }

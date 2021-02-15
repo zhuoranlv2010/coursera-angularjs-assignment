@@ -19,14 +19,15 @@
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control"
-             ng-model="humanInput">
+             ng-model="humanInput"
+             ng-class="messageColor">
              <p>*Note it does NOT consider an empty item, i.e., , , as an item towards to the count.</p>
          </div>
          <div class="form-group" ng-click="sayMessage();">
              <button class="btn btn-default">Check If Too Much</button>
          </div>
-         <div class="form-group message" ng-class="messageColor">
-           <p>{{message}}</p>
+         <div class="form-group message">
+           <p ng-class="messageColor">{{message}}</p>
          </div>
    </div>
 
