@@ -1,9 +1,13 @@
-.green {
+.green p {
   color: green;
   border-color: green;
+  border: 1px solid;
+  width: 250px;
 }
 
-.red {
+.red p {
   color: red;
   border-color: red;
+  border: 1px solid;
+  width: 250px;
 }
