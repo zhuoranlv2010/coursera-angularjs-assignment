@@ -12,9 +12,12 @@ function FoundItemsDirective() {
     restrict: "E",
     templateUrl: 'foundItems.html',
     scope: {
-      items: '<foundItems',
+      foundItems: '<',
       onRemove: '&'
-    }
+    },
+    controller: NarrowItDownController,
+    controllerAs: 'menu',
+    bindToController: true
   };
 
   return ddo;

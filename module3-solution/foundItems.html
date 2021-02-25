@@ -1,9 +1,9 @@
 <div class="container-fluid found-list">
-  <div class="row unit-item" ng-repeat="item in items">
+  <div class="row unit-item" ng-repeat="item in menu.foundItems">
     <div class="col-md-2">{{ item.name }}</div>
     <div class="col-md-2">{{ item.short_name }}</div>
     <div class="col-md-5">{{ item.description }}</div>
-    <div class="col-md-3"><button ng-click="onRemove({index: $index});">Don't want this one!</button></div>
+    <div class="col-md-3"><button ng-click="menu.onRemove({index: $index});">Don't want this one!</button></div>
   </div>
-  <div ng-if="items.length === 0">Nothing found</div>
+  <div ng-if="menu.foundItems.length === 0">Nothing found</div>
 </div>
