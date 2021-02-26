@@ -6,10 +6,12 @@ input[type="text"] {
   float: left;
 }
 .unit-item {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
+  background-color: #F2F3F4;
+  padding: 5px;
+  text-align: center;
 }
 .found-list {
-  float: left;
   clear: both;
 }
 .narrow-button {

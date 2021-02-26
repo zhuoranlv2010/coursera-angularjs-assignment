@@ -13,7 +13,8 @@ function FoundItemsDirective() {
     templateUrl: 'foundItems.html',
     scope: {
       foundItems: '<',
-      onRemove: '&'
+      onRemove: '&',
+      onEmpty: '<'
     },
     controller: NarrowItDownController,
     controllerAs: 'menu',
@@ -35,9 +36,11 @@ function NarrowItDownController(MenuSearchService) {
 
       promise.then(function (result) {
         menu.found = result;
+        menu.isEmpty = menu.found.length === 0;
       });
     } else {
       menu.found = [];
+      menu.isEmpty = true;
     }
   };
 
