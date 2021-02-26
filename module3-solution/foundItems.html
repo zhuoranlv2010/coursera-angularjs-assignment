@@ -5,7 +5,6 @@
     <div class="col-md-5">{{ item.description }}</div>
     <div class="col-md-3"><button class="btn btn-danger" ng-click="menu.onRemove({index: $index});">Don't want this one!</button></div>
   </div>
-  <!-- <div ng-if="menu.onEmpty">Nothing found</div> -->
   <div class="alert alert-danger" role="alert" ng-if="menu.onEmpty">
   <strong>Nothing found!</strong>
   </div>
