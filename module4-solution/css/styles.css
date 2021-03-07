@@ -1,0 +1,16 @@
+.menu-group {
+  width: 80%;
+}
+.menu-group h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.cateogry-list {
+  margin-bottom: 1px;
+  background-color: #F8F9F9;
+  padding: 5px;
+  text-align: center;
+}
+.card-group {
+  margin-bottom: 10px;
+}

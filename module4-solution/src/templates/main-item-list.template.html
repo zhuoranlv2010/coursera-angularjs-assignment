@@ -1,0 +1,9 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a ui-sref="home">Home</a></li>
+    <li class="breadcrumb-item"><a ui-sref="categoryList">Menu Category</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ itemList.categoryName }}</li>
+  </ol>
+</nav>
+
+<items menu-items="itemList.items"></items>
