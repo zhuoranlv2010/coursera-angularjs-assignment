@@ -1,0 +1,127 @@
+<div class="container">
+  <h3 id="sign-up-page-title">Sign up for the newsletter!</h3>
+  <form id="signUpForm" class="form-horizontal" name="regForm" novalidate>
+      <div class="form-group has-feedback">
+        <label for="inputFirstName" class="col-md-2 control-label">First Name</label>
+        <div class="col-md-10">
+          <input id="inputFirstName" class="form-control" type="text" name="firstName" placeholder="Enter first name"
+            ng-model="reg.user.firstName"
+            required>
+            <div class="form-error">
+              <span ng-if="regForm.firstName.$invalid && regForm.firstName.$touched">
+                First Name is a required field!
+              </span>
+            </div>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="regForm.firstName.$valid && regForm.firstName.$touched">
+            </span>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="regForm.firstName.$invalid && regForm.firstName.$touched">
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <label for="inputLastName" class="col-md-2 control-label">Last Name</label>
+        <div class="col-md-10">
+          <input id="inputLastName" class="input-text form-control" type="text" name="lastName" placeholder="Enter last name"
+            ng-model="reg.user.lastName"
+            required>
+            <div class="form-error">
+              <span ng-if="regForm.lastName.$invalid && regForm.lastName.$touched">
+                Last Name is a required field!
+              </span>
+            </div>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="regForm.lastName.$valid && regForm.lastName.$touched">
+            </span>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="regForm.lastName.$invalid && regForm.lastName.$touched">
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <label for="inputEmail" class="col-md-2 control-label">Email Address</label>
+        <div class="col-md-10">
+          <input id="inputEmail" class="input-text form-control" type="email" name="email" placeholder="Enter email address"
+            ng-model="reg.user.email"
+            required>
+            <div class="form-error">
+              <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+                Email Address is a required field and must be in the format: handle@domain
+              </span>
+            </div>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="regForm.email.$valid && regForm.email.$touched">
+            </span>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="regForm.email.$invalid && regForm.email.$touched">
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <label for="inputPhone" class="col-md-2 control-label">Phone Number</label>
+        <div class="col-md-10">
+          <input id="inputPhone" class="input-text form-control" type="text" name="phone" placeholder="Enter phone number"
+            ng-model="reg.user.phone"
+            pattern="(\d{3})-(\d{3})-(\d{4})"
+            required>
+            <div class="form-error">
+              <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+                Phone Number is a required field and must be in the format ###-###-####.
+              </span>
+            </div>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="regForm.phone.$valid && regForm.phone.$touched">
+            </span>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <label for="inputFavorateDish" class="col-md-2 control-label">Favorite Dish</label>
+        <div class="col-md-10">
+          <input id="inputFavorateDish" class="input-text form-control" type="text" name="itemShortName" placeholder="Enter the short name of your favorite dish"
+            ng-model="reg.user.favoriteItemShortName"
+            required>
+            <div class="form-error">
+              <span ng-if="regForm.itemShortName.$invalid && regForm.itemShortName.$touched">
+                Favorite Dish is a required field!
+              </span>
+              <span ng-if="reg.noSuchItem">
+                No such menu number exists!
+              </span>
+            </div>
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="regForm.itemShortName.$valid && regForm.itemShortName.$touched">
+            </span>
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="regForm.itemShortName.$invalid && regForm.itemShortName.$touched">
+            </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <button
+              type="button"
+              class="btn btn-primary"
+              ng-disabled="regForm.$invalid"
+              ng-click="reg.submit()">Submit</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <p ng-if="reg.saved">Your information has been saved!</p>
+        </div>
+      </div>
+
+
+  </form>
+
+</div>
