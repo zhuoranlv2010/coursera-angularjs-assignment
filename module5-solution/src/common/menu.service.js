@@ -29,7 +29,7 @@ function MenuService($http, ApiPath) {
   service.getMenuItem = function (itemShortName) {
     return $http({
       method: 'GET',
-      url: (ApiPath + "/menu_items/" + itemShortName + ".json")
+      url: (ApiPath + "/menu_items/" + itemShortName.toUpperCase() + ".json")
     }).then(function (result) {
       return result.data;
     });
